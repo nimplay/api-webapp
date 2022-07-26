@@ -35,10 +35,12 @@ body {
   background-color: $color-white;
   box-sizing: inherit;
 }
+
 button {
   padding: 1em;
   border-radius: 50%;
 }
+
 .icons {
   font-family: 'Material Icons', sans-serif;
   font-size: 1.4rem;
@@ -60,19 +62,18 @@ header {
     cursor: pointer;
   }
 
-  
   button {
     background-color: transparent;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:hover {
       background-color: $color-darkblue;
     }
   }
 }
-
 
 footer {
   display: block;
@@ -82,6 +83,7 @@ footer {
   position: fixed;
   bottom: 0;
   background-color: $color-blue;
+
   a {
     margin-left: 1rem;
     color: $color-white;
@@ -94,27 +96,25 @@ footer {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
     button {
       margin-left: 2rem;
     }
 
-   
     h1 {
       font-size: 2rem;
       margin-left: 2rem;
     }
-  
 
-  h3 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    color: $color-white;
+    h3 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      color: $color-white;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-
-}
 }
