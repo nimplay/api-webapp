@@ -43,7 +43,7 @@ button {
 
 .icons {
   font-family: 'Material Icons', sans-serif;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 // Header
@@ -52,7 +52,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
   padding: 0.5rem;
   background-color: $color-blue;
 
@@ -102,7 +101,7 @@ footer {
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.3rem;
       margin-left: 2rem;
     }
 
