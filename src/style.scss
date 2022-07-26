@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Mix-ins
+@mixin margin-sides($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+// Template
+$color-black: rgb(0, 0, 0);
+$color-lightgrey: #666569;
+$color-darkblue: #0d59bb;
+$color-blue: #5799ef;
+$color-white: white;
+$color-yellow: rgb(238, 177, 11);
+// Global
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-white;
+  box-sizing: inherit;
+}
+button {
+  padding: 1em;
+  border-radius: 50%;
+}
+.icons {
+  font-family: 'Material Icons', sans-serif;
+  font-size: 1.4rem;
+}
+
+// Header
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  background-color: $color-blue;
+
+  h1 {
+    font-size: 1.2rem;
+    color: $color-white;
+    cursor: pointer;
+  }
+
+  
+  button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $color-darkblue;
+    }
+  }
+}
+
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  background-color: $color-blue;
+  a {
+    margin-left: 1rem;
+    color: $color-white;
+  }
+}
+// Desktop Version
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    button {
+      margin-left: 2rem;
+    }
+
+   
+    h1 {
+      font-size: 2rem;
+      margin-left: 2rem;
+    }
+  
+
+  h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: $color-white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+}

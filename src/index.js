@@ -1,3 +1,2 @@
-import './statics/nimplayLogo.jpg';
+import './style.scss';
 
-require('./style.css');

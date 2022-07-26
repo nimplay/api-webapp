@@ -1,1 +1,89 @@
-body{background-color:#ff0}
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
+  \*************************************************************************************************************/
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (2) ***!
+  \*************************************************************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  list-style: none;
+  text-decoration: none; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: white;
+  box-sizing: inherit; }
+
+button {
+  padding: 1em;
+  border-radius: 50%; }
+
+.icons {
+  font-family: 'Material Icons', sans-serif;
+  font-size: 1.4rem; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  background-color: #5799ef; }
+  header h1 {
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer; }
+  header button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header button:hover {
+      background-color: #0d59bb; }
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  background-color: #5799ef; }
+  footer a {
+    margin-left: 1rem;
+    color: white; }
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    header button {
+      margin-left: 2rem; }
+    header h1 {
+      font-size: 2rem;
+      margin-left: 2rem; }
+    header h3 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      color: white; }
+      header h3:hover {
+        text-decoration: underline; } }
+
