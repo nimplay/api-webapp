@@ -2,11 +2,7 @@ import './style.scss';
 import getData from './modules/externelAPI.js';
 import { getLikes, postLike } from './modules/involvementAPI.js';
 
-
-// Get Data from TVMAZE API
-const rootUrl = 'https://api.tvmaze.com/singlesearch/shows?q=';
 const countResults = document.querySelector('h2');
-let query = '';
 
 // Update Likes
 const updateLikes = async () => {
@@ -20,14 +16,14 @@ const updateLikes = async () => {
   });
 };
 
-// Display Cards 
+// Display Cards
 const cards = document.querySelector('.cards');
 const createElement = async (requestURL) => {
   cards.innerHTML = '';
   await getData(requestURL)
     .then((data) => {
       let elementCount = 0;
-      const dataArray = data._embedded.episodes;
+      const dataArray = data.embedded.episodes;
       dataArray.forEach((el) => {
         const div = document.createElement('div');
         div.classList.add('cardItem');
@@ -65,7 +61,7 @@ const createElement = async (requestURL) => {
         starBorder.textContent = 'star_border';
         starBorder.setAttribute('id', el.id);
 
-        // Like 
+        // Like
         starBorder.addEventListener('click', () => {
           postLike(el.show.id);
           starBorder.classList.toggle('liked');
@@ -84,7 +80,7 @@ const createElement = async (requestURL) => {
       });
     });
 };
-
+createElement('https://api.tvmaze.com/shows');
 
 const createElementForShows = async (requestURL) => {
   cards.innerHTML = '';
@@ -122,7 +118,7 @@ const createElementForShows = async (requestURL) => {
         starBorder.textContent = 'star_border';
         starBorder.setAttribute('id', el.id);
 
-        // Like Event
+        // Like
         starBorder.addEventListener('click', () => {
           postLike(el.id);
           starBorder.classList.toggle('liked');
@@ -142,12 +138,8 @@ const createElementForShows = async (requestURL) => {
     });
 };
 
-
-
 window.onload = () => {
   const defaultURL = 'https://api.tvmaze.com/shows';
   createElementForShows(defaultURL);
   setTimeout(updateLikes, 100);
 };
-
-

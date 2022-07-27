@@ -9,7 +9,7 @@
 // color pellete
 $color-1: #592533;
 $color-2: #f2a413;
-$color-3: #A67417;
+$color-3: #a67417;
 $color-4: #a68c6d;
 $color-5: #402e27;
 
@@ -45,7 +45,6 @@ button {
   font-size: 2.4rem;
 }
 
-
 header {
   display: flex;
   flex-direction: row;
@@ -54,11 +53,12 @@ header {
   padding: 0.4rem;
   background-color: $color-5;
 
-  h1,h2 {
+  h1,
+  h2 {
     font-size: 1.2rem;
     color: white;
   }
-  
+
 
   button {
     background-color: transparent;
@@ -115,12 +115,12 @@ header {
       text-align: center;
 
       &:hover {
-        cursor:pointer;
+        cursor: pointer;
         color: $color-4;
       }
     }
 
- 
+
     .starContainer {
       display: flex;
       flex-direction: row;
@@ -166,16 +166,16 @@ header {
       font-weight: 900;
       border-radius: 0.8rem;
       color: $color-1;
-      background-color:  white;
+      background-color: white;
       width: 40%;
       border: 2px solid white;
-      box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
       cursor: pointer;
       opacity: 0.7;
 
-        &:hover{
-          opacity: 1;
-        }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -211,7 +211,7 @@ footer {
       margin-left: 2rem;
     }
 
-      h2 {
+    h2 {
       font-size: 0.9rem;
       margin-left: 2rem;
     }
