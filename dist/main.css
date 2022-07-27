@@ -1,13 +1,9 @@
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
   \*********************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
-/*!*************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
-  \*************************************************************************************************************/
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 /*!*************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (2) ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
   \*************************************************************************************************************/
 *,
 *::before,
@@ -15,7 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   color: white;
   list-style: none;
   text-decoration: none; }
@@ -28,32 +24,33 @@ body {
   box-sizing: inherit; }
 
 button {
-  padding: 1em;
+  padding: 0.7em;
   border-radius: 50%; }
 
 .icons {
   font-family: 'Material Icons', sans-serif;
-  font-size: 2rem; }
+  font-size: 2.4rem; }
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
-  background-color: #592533; }
-  header h1 {
+  padding: 0.4rem;
+  background-color: #402e27;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000; }
+  header h1,
+  header h2 {
     font-size: 1.2rem;
-    color: white;
-    cursor: pointer; }
+    color: white; }
   header button {
     background-color: transparent;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center; }
-    header button:hover {
-      background-color: #402e27; }
 
 .cards {
   margin-top: 1rem;
@@ -61,6 +58,8 @@ header {
   display: grid;
   grid-template-columns: auto;
   place-items: center;
+  position: relative;
+  top: 5rem;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
@@ -70,15 +69,16 @@ header {
     display: flex;
     flex-direction: column;
     align-content: center;
-    background-color: #a68c6d;
-    width: 300px;
+    background-color: #592533;
+    width: 310px;
     height: 600px;
     border-radius: 1rem;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 5px #592533; }
     .cards .cardItem .cardImg {
-      border: 4px solid #402e27;
+      border: 4px solid #592533;
       width: 100%;
       height: 400px;
+      border-radius: 1rem;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
@@ -91,25 +91,8 @@ header {
       height: 50px;
       text-align: center; }
       .cards .cardItem .cardName:hover {
-        text-decoration: underline;
-        cursor: crosshair; }
-    .cards .cardItem .cardDetails {
-      font-size: 1rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      color: #592533;
-      margin-bottom: 1rem;
-      font-style: italic;
-      text-align: left;
-      max-width: 100%;
-      overflow-y: scroll;
-      height: 150px;
-      margin-top: 0.5rem;
-      outline: 2px solid #402e27; }
-    .cards .cardItem .cardRuntime {
-      font-size: 1rem;
-      color: #f2a413;
-      text-align: center; }
+        cursor: pointer;
+        color: #a68c6d; }
     .cards .cardItem .starContainer {
       display: flex;
       flex-direction: row;
@@ -119,7 +102,7 @@ header {
       width: 80%; }
     .cards .cardItem .starRate {
       font-size: 1.5rem;
-      margin-left: 1rem;
+      margin-left: 5rem;
       color: #f2a413; }
     .cards .cardItem .starCount {
       font-size: 1rem;
@@ -129,7 +112,7 @@ header {
       text-align: center;
       margin-right: auto; }
     .cards .cardItem .starBorder {
-      color: #A67417;
+      color: #a67417;
       cursor: pointer;
       margin-right: auto; }
       .cards .cardItem .starBorder:hover {
@@ -140,11 +123,17 @@ header {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 1rem;
-      border-radius: 1rem;
-      background-color: #a68c6d;
+      font-weight: 900;
+      border-radius: 0.8rem;
       color: #592533;
+      background-color: white;
       width: 40%;
-      outline: 1px solid black; }
+      border: 2px solid white;
+      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      opacity: 0.7; }
+      .cards .cardItem .commentBtn:hover {
+        opacity: 1; }
 
 footer {
   display: block;
@@ -153,7 +142,8 @@ footer {
   padding: 1rem;
   position: fixed;
   bottom: 0;
-  background-color: #592533; }
+  background-color: #402e27;
+  z-index: 1000; }
   footer a {
     margin-left: 1rem;
     color: white; }
@@ -168,6 +158,9 @@ footer {
       margin-left: 2rem; }
     header h1 {
       font-size: 1.3rem;
+      margin-left: 2rem; }
+    header h2 {
+      font-size: 0.9rem;
       margin-left: 2rem; }
     header h3 {
       margin-top: 1rem;
