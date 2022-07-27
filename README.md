@@ -3,10 +3,6 @@
 > Its a web application based on an external API [tvmaze](https://www.tvmaze.com/api) that shows list of movies which can be liked and commented. 
 > We selected [this](https://www.tvmaze.com/api) API that provides data about Movies.
 
-[screenshot]()
-
-
-
 ## Live Demo
 
 [Live Demo Link](https://nimplay.github.io/dist/index.html)
