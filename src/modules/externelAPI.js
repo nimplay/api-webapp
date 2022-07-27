@@ -5,3 +5,5 @@ const getData = async (url) => {
 };
 
 export default getData;
+
+

@@ -3,6 +3,10 @@ import getData from './modules/externelAPI.js';
 import { getLikes, postLike } from './modules/involvementAPI.js';
 
 
+// Get Data from TVMAZE API
+const rootUrl = 'https://api.tvmaze.com/singlesearch/shows?q=';
+const countResults = document.querySelector('h2');
+let query = '';
 
 // Update Likes
 const updateLikes = async () => {
@@ -22,6 +26,7 @@ const createElement = async (requestURL) => {
   cards.innerHTML = '';
   await getData(requestURL)
     .then((data) => {
+      let elementCount = 0;
       const dataArray = data._embedded.episodes;
       dataArray.forEach((el) => {
         const div = document.createElement('div');
@@ -74,6 +79,8 @@ const createElement = async (requestURL) => {
         starContainer.append(starRate, starCount, starBorder);
         div.append(divImg, starContainer, h1, h2, details, cBtn);
         cards.append(div);
+        elementCount += 1;
+        countResults.textContent = `Search Results (${elementCount})`;
       });
     });
 };
@@ -83,6 +90,7 @@ const createElementForShows = async (requestURL) => {
   cards.innerHTML = '';
   await getData(requestURL)
     .then((data) => {
+      let elementCount = 0;
       data.forEach((el) => {
         const div = document.createElement('div');
         div.classList.add('cardItem');
@@ -128,6 +136,8 @@ const createElementForShows = async (requestURL) => {
         starContainer.append(starRate, starCount, starBorder);
         div.append(divImg, starContainer, h1, cBtn);
         cards.append(div);
+        elementCount += 1;
+        countResults.textContent = `Number of Elements: ${elementCount}`;
       });
     });
 };
