@@ -52,13 +52,15 @@ header {
   align-items: center;
   padding: 0.4rem;
   background-color: $color-5;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
 
   h1,
   h2 {
     font-size: 1.2rem;
     color: white;
   }
-
 
   button {
     background-color: transparent;
@@ -119,7 +121,6 @@ header {
         color: $color-4;
       }
     }
-
 
     .starContainer {
       display: flex;
