@@ -78,6 +78,8 @@ header {
   display: grid;
   grid-template-columns: auto;
   place-items: center;
+  position: relative;
+  top: 5rem;
 
   @include margin-sides(auto);
 
@@ -189,6 +191,7 @@ footer {
   position: fixed;
   bottom: 0;
   background-color: $color-5;
+  z-index: 1000;
 
   a {
     margin-left: 1rem;
