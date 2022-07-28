@@ -1,10 +1,19 @@
-/*!*********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
-  \*********************************************************************************************************/
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-/*!*************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
-  \*************************************************************************************************************/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Mix-ins
+@mixin margin-sides($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+// color pellete
+$color-1: #592533;
+$color-2: #f2a413;
+$color-3: #a67417;
+$color-4: #a68c6d;
+$color-5: #402e27;
+
+// Global
 *,
 *::before,
 *::after {
@@ -14,24 +23,29 @@
   font-family: sans-serif;
   color: white;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: black;
   box-sizing: inherit;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 button {
   padding: 0.7em;
-  border-radius: 50%; }
+  border-radius: 50%;
+}
 
 .icons {
   font-family: 'Material Icons', sans-serif;
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+}
 
 header {
   display: flex;
@@ -39,20 +53,25 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem;
-  background-color: #402e27;
+  background-color: $color-5;
   position: fixed;
   width: 100vw;
-  z-index: 1000; }
-  header h1,
-  header h2 {
+  z-index: 1000;
+
+  h1,
+  h2 {
     font-size: 1.2rem;
-    color: white; }
-  header button {
+    color: white;
+  }
+
+  button {
     background-color: transparent;
     border: none;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+  }
+}
 
 .popup {
   margin-top: 2rem;
@@ -67,7 +86,8 @@ header {
   max-height: 95%;
   overflow: hidden;
   overflow-y: scroll;
-  backdrop-filter: blur(10px); }
+  backdrop-filter: blur(10px);
+}
 
 .popup-content {
   width: 40%;
@@ -79,14 +99,16 @@ header {
   padding: 1rem;
   border-radius: 20px;
   margin-top: 1rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+}
 
 .popup-title {
-  color: #f2a413;
+  color: $color-2;
   font-size: 2rem;
   margin: 0;
   align-self: flex-start;
-  margin-right: 3rem; }
+  margin-right: 3rem;
+}
 
 .close-popup {
   width: 1.5rem;
@@ -103,12 +125,14 @@ header {
   font-size: large;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .close-popup:hover {
   width: 1.8rem;
   height: 1.8rem;
-  transition: 0.1s; }
+  transition: 0.1s;
+}
 
 .popup-rating-div {
   align-self: flex-start;
@@ -117,13 +141,16 @@ header {
   flex-direction: row;
   align-items: center;
   margin-top: 0.3rem;
-  gap: 0.5rem; }
+  gap: 0.5rem;
+}
 
 .popup-star {
-  height: 1.5rem; }
+  height: 1.5rem;
+}
 
 .popup-punt {
-  color: white; }
+  color: white;
+}
 
 .popup-img {
   margin-top: 2rem;
@@ -131,7 +158,8 @@ header {
   height: 50vh;
   object-fit: scale-down;
   align-self: flex-start;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+}
 
 .popup-description {
   color: white;
@@ -140,34 +168,39 @@ header {
   margin-left: 2rem;
   text-align: justify;
   line-height: 1.2em;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+}
 
 .popup-category {
   align-self: flex-start;
   display: flex;
   flex-direction: row;
   margin-left: 2rem;
-  gap: 0.5rem; }
+  gap: 0.5rem;
+}
 
 .popup-cat-des {
   color: white;
   margin-top: 1rem;
   align-self: flex-start;
-  border: 1.5px solid #a68c6d;
+  border: 1.5px solid $color-4;
   border-radius: 30px;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+}
 
 .popup-line {
   margin-top: 2rem;
   width: 100%;
-  border: 1px solid #a68c6d; }
+  border: 1px solid $color-4;
+}
 
 .popup-subtilte {
-  color: #f2a413;
+  color: $color-2;
   margin-top: 0.5rem;
   margin-left: 2rem;
   align-self: flex-start;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 .popup-comment-list {
   align-self: flex-start;
@@ -175,27 +208,33 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+}
 
 .comment-item {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  border: 1px solid #a68c6d;
+  border: 1px solid $color-4;
   width: 100%;
   list-style: none;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .user {
-  color: white; }
+  color: white;
+}
 
 .date {
-  color: white; }
+  color: white;
+}
 
 .user-comment {
-  color: white; }
+  color: white;
+}
 
 /* review form */
+
 .popup-form {
   align-self: flex-start;
   display: flex;
@@ -204,11 +243,13 @@ header {
   margin-left: 2rem;
   margin-top: 0.5rem;
   width: 60%;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 
 #popup-subtitle {
   align-self: flex-start;
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 .popup-form-name {
   width: 14rem;
@@ -216,7 +257,8 @@ header {
   border-radius: 5px;
   padding-left: 0.5rem;
   border-style: none;
-  color: black; }
+  color: black;
+}
 
 .popup-form-msg {
   width: 100%;
@@ -225,7 +267,8 @@ header {
   padding-left: 0.5rem;
   padding-top: 0.5rem;
   border-style: none;
-  color: black; }
+  color: black;
+}
 
 .popup-submit {
   width: 5rem;
@@ -233,12 +276,14 @@ header {
   border-radius: 5px;
   padding-left: 0.5rem;
   align-self: flex-start;
-  background-color: #f2a413;
+  background-color: $color-2;
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
-  border-width: 2px; }
+  border-width: 2px;
+}
 
+// Cards Section
 .cards {
   margin-top: 6rem;
   padding-bottom: 4rem;
@@ -247,80 +292,108 @@ header {
   place-items: center;
   position: relative;
   gap: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+
+  @include margin-sides(auto);
+
   z-index: 1;
-  overflow-y: scroll; }
-  .cards .cardItem {
+  overflow-y: scroll;
+
+  .cardItem {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-content: center;
-    background-color: #592533;
+    background-color: $color-1;
     width: 310px;
     height: 600px;
     border-radius: 1rem;
-    box-shadow: 0 4px 5px #592533; }
-    .cards .cardItem .cardImg {
-      border: 4px solid #592533;
+    box-shadow: 0 4px 5px $color-1;
+
+    .cardImg {
+      border: 4px solid $color-1;
       width: 100%;
       height: 400px;
       border-radius: 1rem;
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat; }
-      .cards .cardItem .cardImg:hover {
-        box-shadow: 0 0 30px black inset; }
-    .cards .cardItem .cardName {
+      background-repeat: no-repeat;
+
+      &:hover {
+        box-shadow: 0 0 30px black inset;
+      }
+    }
+
+    .cardName {
       margin-top: 1rem;
       font-size: 1.5rem;
       color: white;
       height: 50px;
-      text-align: center; }
-      .cards .cardItem .cardName:hover {
+      text-align: center;
+
+      &:hover {
         cursor: pointer;
-        color: #a68c6d; }
-    .cards .cardItem .starContainer {
+        color: $color-4;
+      }
+    }
+
+    .starContainer {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       margin-top: 1rem;
-      width: 80%; }
-    .cards .cardItem .starRate {
+      width: 80%;
+    }
+
+    .starRate {
       font-size: 1.5rem;
       margin-left: 5rem;
-      color: #f2a413; }
-    .cards .cardItem .starCount {
+      color: $color-2;
+    }
+
+    .starCount {
       font-size: 1rem;
       border-radius: 1rem;
       color: white;
       width: 10%;
       text-align: center;
-      margin-right: auto; }
-    .cards .cardItem .starBorder {
-      color: #a67417;
-      cursor: pointer;
-      margin-right: auto; }
-      .cards .cardItem .starBorder:hover {
-        background-color: #f2a413; }
-    .cards .cardItem .liked {
-      color: #f2a413; }
-    .cards .cardItem .commentBtn {
-      margin-left: auto;
       margin-right: auto;
+    }
+
+    .starBorder {
+      color: $color-3;
+      cursor: pointer;
+      margin-right: auto;
+
+      &:hover {
+        background-color: $color-2;
+      }
+    }
+
+    .liked {
+      color: $color-2;
+    }
+
+    .commentBtn {
+      @include margin-sides(auto);
+
       margin-bottom: 1rem;
       font-weight: 900;
       border-radius: 0.8rem;
-      color: #592533;
+      color: $color-1;
       background-color: white;
       width: 40%;
       border: 2px solid white;
       box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
       cursor: pointer;
-      opacity: 0.7; }
-      .cards .cardItem .commentBtn:hover {
-        opacity: 1; }
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
 
 footer {
   display: block;
@@ -329,40 +402,63 @@ footer {
   padding: 1rem;
   position: fixed;
   bottom: 0;
-  background-color: #402e27;
-  z-index: 1000; }
-  footer a {
-    margin-left: 1rem;
-    color: white; }
+  background-color: $color-5;
+  z-index: 1000;
 
+  a {
+    margin-left: 1rem;
+    color: white;
+  }
+}
+
+// Desktop Version
 @media screen and (min-width: 768px) {
   header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center; }
-    header button {
-      margin-left: 2rem; }
-    header h1 {
+    align-items: center;
+
+    button {
+      margin-left: 2rem;
+    }
+
+    h1 {
       font-size: 1.3rem;
-      margin-left: 2rem; }
-    header h2 {
+      margin-left: 2rem;
+    }
+
+    h2 {
       font-size: 0.9rem;
-      margin-left: 2rem; }
-    header h3 {
+      margin-left: 2rem;
+    }
+
+    h3 {
       margin-top: 1rem;
       font-size: 1.5rem;
       margin-left: 2rem;
-      color: white; }
-      header h3:hover {
-        text-decoration: underline; }
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; }
-    .cards .cardItem .cardName {
-      height: 75px; }
-    .cards .cardItem .starCount {
-      width: 10%; } }
+    justify-content: center;
 
+    .cardItem {
+      .cardName {
+        height: 75px;
+      }
+
+      .starCount {
+        width: 10%;
+      }
+    }
+  }
+}
