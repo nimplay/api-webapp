@@ -19,4 +19,31 @@ const getLikes = async () => {
   return likes;
 };
 
-export { getLikes, postLike };
+const postComment = async (_id, _name, _comment) => {
+  const response = await fetch(`${url}${appID}/comments`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: _id,
+      username: _name,
+      comment: _comment,
+    }),
+  });
+  const post = await response.text();
+  return post;
+};
+
+const getComments = async (_id) => {
+  const response = await fetch(`${url}${appID}/comments?item_id=${_id}`);
+  const comments = await response.json();
+  return comments;
+};
+
+export {
+  postLike,
+  getLikes,
+  postComment,
+  getComments,
+};

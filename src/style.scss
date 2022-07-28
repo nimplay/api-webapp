@@ -31,8 +31,10 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: black;
   box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -70,16 +72,221 @@ header {
     align-items: center;
   }
 }
+.popup {
+  background-color: black;
+  border-radius: 1rem;  
+  font-size: .8rem;
+  padding: 1rem 1.5rem 1.5rem;
+  position: absolute;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.popup-content {
+  width: 40%;
+  background-color: $color-1;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  padding: 1rem;  
+  border-radius: 20px;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.popup-title {
+  color: $color-2;
+  font-size: 2rem;
+  margin: 0;
+  align-self: flex-start;
+  margin-right: 3rem;
+}
+
+.close-popup {
+  width: 1.5rem;
+  height: 1.5rem;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-style: none;
+  background-color: red;  
+  align-self: flex-end;
+  position: absolute;
+  transition: 0.1s;
+  border-radius: 30px;
+  color: white;
+  font-size: large;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-popup:hover {
+  width: 1.8rem;
+  height: 1.8rem;
+  transition: 0.1s;
+}
+
+.popup-rating-div {
+  align-self: flex-start;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.3rem;
+  gap: 0.5rem;
+}
+
+.popup-star {
+  height: 1.5rem;  
+}
+
+.popup-punt {
+  color: white;
+}
+
+.popup-img{
+  margin-top: 2rem;
+  width: auto;   
+  height: 50vh; 
+  object-fit: scale-down;
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+
+.popup-description {
+  color: white;
+  margin-top: 1rem;
+  align-self: flex-start;
+  margin-left: 2rem;
+  text-align: justify;
+  line-height: 1.2em;
+  margin-right: 2rem;
+}
+
+.popup-category {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+  gap: 0.5rem;
+}
+
+.popup-cat-des {
+  color: white;
+  margin-top: 1rem;
+  align-self: flex-start;  
+  border: 1.5px solid $color-4;
+  border-radius: 30px;
+  padding: 0.5rem;
+}
+
+.popup-line {
+  margin-top: 2rem;
+  width: 100%;  
+  border: 1px solid $color-4;
+}
+
+.popup-subtilte {
+  color: $color-2;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.popup-comment-list {
+  align-self: flex-start;  
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 2rem;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: 1px solid $color-4;
+  width: 100%; list-style: none;
+  border-radius: 5px;
+}
+
+.user {
+  color: white;
+}
+
+.date {
+  color: white;
+}
+
+.user-comment {
+  color: white;
+}
+
+/* review form */
+
+.popup-form {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+#popup-subtitle {
+  align-self: flex-start;
+  margin-left: 0;
+}
+
+.popup-form-name {
+  width: 14rem;
+  height: 2rem;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  border-style: none;
+  color: black;
+}
+
+.popup-form-msg {
+  width: 100%;
+  height: 5rem;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  border-style: none;
+  color: black;
+}
+
+.popup-submit {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  align-self: flex-start;
+  background-color: $color-2;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-width: 2px; 
+}
+
+
+
 
 // Cards Section
 .cards {
-  margin-top: 1rem;
+  margin-top: 6rem;
   padding-bottom: 4rem;
   display: grid;
   grid-template-columns: auto;
   place-items: center;
   position: relative;
-  top: 5rem;
+  gap: 1rem;
 
   @include margin-sides(auto);
 
@@ -183,6 +390,7 @@ header {
   }
 }
 
+
 footer {
   display: block;
   width: 100%;
@@ -198,6 +406,8 @@ footer {
     color: white;
   }
 }
+
+
 // Desktop Version
 @media screen and (min-width: 768px) {
   header {
@@ -233,8 +443,10 @@ footer {
   }
 
   .cards {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .cardItem {
       .cardName {
@@ -247,3 +459,6 @@ footer {
     }
   }
 }
+
+
+

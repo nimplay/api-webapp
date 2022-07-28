@@ -1,6 +1,7 @@
 import './style.scss';
 import getData from './modules/externelAPI.js';
 import { getLikes, postLike } from './modules/involvementAPI.js';
+import popup from './modules/popup.js';
 
 const countResults = document.querySelector('h2');
 
@@ -128,12 +129,17 @@ const createElementForShows = async (requestURL) => {
 
         const cBtn = document.createElement('button');
         cBtn.classList.add('commentBtn');
+        cBtn.setAttribute('id', `b${el.id}`);
         cBtn.textContent = 'Comments';
         starContainer.append(starRate, starCount, starBorder);
         div.append(divImg, starContainer, h1, cBtn);
         cards.append(div);
         elementCount += 1;
         countResults.textContent = `Number of Elements: ${elementCount}`;
+
+        cBtn.addEventListener('click', () => {
+          popup(el.id);
+        });
       });
     });
 };
