@@ -5,7 +5,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://nimplay.github.io/dist/)
+[Live Demo Link](https://nimplay.github.io/dist)
 
 ## Built With
 - Languages: HTML, scss and JavaScript
