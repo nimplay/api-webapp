@@ -72,10 +72,11 @@ header {
     align-items: center;
   }
 }
+
 .popup {
-  margin-top: 2rem;  
-  border-radius: 1rem;  
-  font-size: .8rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
   padding: 1rem 1.5rem 1.5rem;
   position: fixed;
   z-index: 100;
@@ -84,22 +85,23 @@ header {
   width: 100%;
   max-height: 95%;
   overflow: hidden;
-  overflow-y: scroll;  
+  overflow-y: scroll;
   backdrop-filter: blur(10px);
-  }
+}
 
 .popup-content {
   width: 40%;
   height: max-content;
   background-color: black;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  padding: 1rem;  
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
   border-radius: 20px;
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
+
 .popup-title {
   color: $color-2;
   font-size: 2rem;
@@ -110,17 +112,17 @@ header {
 
 .close-popup {
   width: 1.5rem;
-  height: 1.5rem;  
+  height: 1.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   border-style: none;
-  background-color: red;  
+  background-color: red;
   align-self: flex-end;
   position: absolute;
   transition: 0.1s;
   border-radius: 30px;
   color: white;
-  font-size: large;    
+  font-size: large;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,17 +145,17 @@ header {
 }
 
 .popup-star {
-  height: 1.5rem;  
+  height: 1.5rem;
 }
 
 .popup-punt {
   color: white;
 }
 
-.popup-img{
+.popup-img {
   margin-top: 2rem;
-  width: auto;   
-  height: 50vh; 
+  width: auto;
+  height: 50vh;
   object-fit: scale-down;
   align-self: flex-start;
   margin-left: 2rem;
@@ -180,7 +182,7 @@ header {
 .popup-cat-des {
   color: white;
   margin-top: 1rem;
-  align-self: flex-start;  
+  align-self: flex-start;
   border: 1.5px solid $color-4;
   border-radius: 30px;
   padding: 0.5rem;
@@ -188,7 +190,7 @@ header {
 
 .popup-line {
   margin-top: 2rem;
-  width: 100%;  
+  width: 100%;
   border: 1px solid $color-4;
 }
 
@@ -201,7 +203,7 @@ header {
 }
 
 .popup-comment-list {
-  align-self: flex-start;  
+  align-self: flex-start;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -214,7 +216,8 @@ header {
   flex-direction: column;
   padding: 0.5rem;
   border: 1px solid $color-4;
-  width: 100%; list-style: none;
+  width: 100%;
+  list-style: none;
   border-radius: 5px;
 }
 
@@ -277,11 +280,8 @@ header {
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
-  border-width: 2px; 
+  border-width: 2px;
 }
-
-
-
 
 // Cards Section
 .cards {
@@ -395,7 +395,6 @@ header {
   }
 }
 
-
 footer {
   display: block;
   width: 100%;
@@ -411,7 +410,6 @@ footer {
     color: white;
   }
 }
-
 
 // Desktop Version
 @media screen and (min-width: 768px) {
@@ -464,6 +462,3 @@ footer {
     }
   }
 }
-
-
-
