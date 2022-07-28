@@ -5,19 +5,24 @@
 
 ## Live Demo
 
-[Live Demo Link](https://nimplay.github.io/dist/index.html)
+[Live Demo Link](https://nimplay.github.io/dist/)
 
 ## Built With
 - Languages: HTML, scss and JavaScript
+- Linters: Lighthouse, Webhint, Stylelint and ESLint
 - Node
 - Gitflow
 - VS Code
 - Webpack
 - Jest
-- APIs: [tvmaze API](https://www.tvmaze.com/api) and Involvement API
+- APIs: [tvmaze API](https://www.tvmaze.com/api) and [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
 - Linters: Lighthouse, Webhint, Stylelint and ESLint
 
 To get a local copy up and running follow these simple example steps.
+
+### Project Documentation
+
+Here is the presentation [video]()
 
 ### Prerequisites
 install git, node, any code editor in your local machine
@@ -43,9 +48,9 @@ open index.html in your local browser
 👤 **Authors**
 Nimrod Acosta
 
-- GitHub: [nimplay](https://github.com/erickhansx)
-- Twitter: [NimrodAcosta](https://twitter.com/https://twitter.com/NimrodAcosta)
-- LinkedIn: [nimrod-acosta](https://www.linkedin.com/in/https:/www.linkedin.com/in/nimrod-acosta-734330169/)
+- GitHub: [nimplay](https://github.com/nimplay)
+- Twitter: [NimrodAcosta](https://twitter.com/NimrodAcosta)
+- LinkedIn: [nimrod-acosta](https://www.linkedin.com/in/nimrod-acosta-734330169/)
   
 ## 🤝 Contributing
 
