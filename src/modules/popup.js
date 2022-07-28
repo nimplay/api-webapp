@@ -117,10 +117,10 @@ const popup = (id) => {
   reviewForm.addEventListener('submit', (e) => {
     e.preventDefault();
     postComment(id, nameBox.value, msgBox.value);
-
+    commentUl.innerHTML = '';
     setTimeout(() => {
       updateComments(id);
-    }, '1000');
+    }, '500');
     nameBox.value = '';
     msgBox.value = '';
   });
