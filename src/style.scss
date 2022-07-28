@@ -73,20 +73,25 @@ header {
   }
 }
 .popup {
-  background-color: black;
+  margin-top: 2rem;  
   border-radius: 1rem;  
   font-size: .8rem;
   padding: 1rem 1.5rem 1.5rem;
-  position: absolute;
-  z-index: 10000;
+  position: fixed;
+  z-index: 100;
   display: flex;
   justify-content: center;
   width: 100%;
-}
+  max-height: 95%;
+  overflow: hidden;
+  overflow-y: scroll;  
+  backdrop-filter: blur(10px);
+  }
 
 .popup-content {
   width: 40%;
-  background-color: $color-1;
+  height: max-content;
+  background-color: black;
   display: flex;
   flex-direction: column; 
   align-items: center; 

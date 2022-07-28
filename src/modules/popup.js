@@ -117,7 +117,10 @@ const popup = (id) => {
   reviewForm.addEventListener('submit', (e) => {
     e.preventDefault();
     postComment(id, nameBox.value, msgBox.value);
-    updateComments(id);
+
+    setTimeout(() => {
+      updateComments(id);
+    }, '1000');
     nameBox.value = '';
     msgBox.value = '';
   });
@@ -125,6 +128,11 @@ const popup = (id) => {
   close.addEventListener('click', (e) => {
     e.preventDefault();
     popup.remove();
+  });
+  window.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.remove();
+    }
   });
 };
 
