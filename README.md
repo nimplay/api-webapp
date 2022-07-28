@@ -7,6 +7,9 @@
 
 [Live Demo Link](https://nimplay.github.io/api-webapp/dist)
 
+## Video Link
+[Click here to watch the video](https://drive.google.com/file/d/1Z6er6-cLoeSmR9cG_U5qDnrWSDfnPB27/view?usp=sharing)
+
 ## Built With
 - Languages: HTML, scss and JavaScript
 - Linters: Lighthouse, Webhint, Stylelint and ESLint
